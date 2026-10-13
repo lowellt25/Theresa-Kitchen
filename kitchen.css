@@ -1,0 +1,107 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: #f9e076;
+}
+#header{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background: #941b0c;
+    width: 100%;
+    color: #f6aa1c;
+    text-align: center;
+    font-family: Verdana;
+}
+
+.navbar ul{
+   list-style-type: none;
+   background-color: #bc3908;
+   text-align: center;
+}
+
+.navbar a{
+    color: #f6aa1c;
+    text-decoration: none;
+    padding: 15px;
+    text-align: center;
+    font-family: 'Trebuchet MS';
+    font-weight: bold;
+    display: block;
+
+}
+
+.navbar a:hover{
+    background-color: #941b0c;
+}
+
+.navbar li{
+    display: inline-block;
+}
+
+h2{
+    padding: 15px;
+    margin: 0 auto;
+    text-align: center;
+    color:#941b0c;
+    font-family: 'Trebuchet MS';
+}
+
+hr{
+    height: 3px;
+    background: #bc3908;
+    border: 0;
+}
+
+button{
+    display: inline;
+    color:#f6aa1c;
+    background-color: #bc3908;
+    position: absolute;
+    right: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-right: 10px;
+    margin-top: 10px;
+    border-color: #941b0c;
+    font-size:large
+}
+
+button:hover{
+    background-color: #941b0c;
+}
+
+#ideasList{
+    color:#941b0c;
+    font-family: 'Trebuchet MS';
+    list-style-type: disc;
+    padding-left: 30px;
+    line-height: 160%;
+}
+
+.form-container{
+    float: right;
+    right:0px;
+    position: fixed;
+}
+
+#greatIdeaInput{
+    margin-top: 14px;
+    margin-right: 125px;
+    height: 25px;
+    width: 200px;
+    font-family: 'Trebuchet MS';
+
+}
+
+
+.recipes{
+    position: relative;
+}
+
+#addButton{
+    margin-right: 50px;
+}

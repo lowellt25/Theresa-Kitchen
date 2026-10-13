@@ -1,0 +1,62 @@
+<!--This file is the homepage of the website, and it is also the
+    breakfast/lunch page. index.html must be kept in the root directory-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Theresa's Kitchen</title>
+    <link rel="stylesheet" href="kitchen.css"
+</head>
+
+
+<body>
+
+<div id = "header">
+    <h1>Theresa's Kitchen</h1>
+</div>
+<nav class = "navbar">
+    <ul>
+        <li><a href = "index.html">Lunch/Dinner</a></li>
+        <li><a href = "breakfast.html">Breakfast</a></li>
+        <li><a href = "dessert.html">Dessert</a></li>
+        <li><a href = "snacks.html">Snacks</a></li>
+    </ul>
+</nav>
+<div class="recipes">
+    <button id="recipesButton">+</button>
+    <h2>Recipes</h2>
+</div>
+<hr>
+
+<div class="Ideas">
+    <button id="ideasButton" onclick="openIdeaForm()">+</button> 
+    <div class="ideaFormPopup" id="ideaForm">
+        <form class="form-container">
+            <input type="text" placeholder="What's your great idea?" id="greatIdeaInput">
+            <button type="button" onclick="closeIdeaForm()">x</button>
+            <button type="submit" id = "addButton">Add</button>
+        </form>
+    <script>
+        function openIdeaForm(){
+            document.getElementById("ideaForm").style.display = "inline";
+            document.getElementById("ideasButton").style.display = "none";
+        }
+        function closeIdeaForm(){
+            document.getElementById("ideaForm").style.display = "none";
+            document.getElementById("ideasButton").style.display = "inline";
+            document.getElementById("greatIdeaInput").value = "";
+        }
+    </script>
+    </div>
+    <h2>Ideas</h2>
+
+    
+
+    <ul id="ideasList"></ul>
+    <script>const category = 'dunch';</script>
+    <script src="ideas.js"></script>
+</div>
+
+
+
+</body>
+</html>
