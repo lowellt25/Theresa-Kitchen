@@ -13,6 +13,8 @@
 <div id = "header">
     <h1>Theresa's Kitchen</h1>
 </div>
+
+<!--Navigation Bar-->
 <nav class = "navbar">
     <ul>
         <li><a href = "index.html">Lunch/Dinner</a></li>
@@ -21,42 +23,50 @@
         <li><a href = "snacks.html">Snacks</a></li>
     </ul>
 </nav>
+
+<!--Recipes Section-->
 <div class="recipes">
     <button id="recipesButton">+</button>
     <h2>Recipes</h2>
 </div>
 <hr>
 
+<!--Ideas Section-->
 <div class="Ideas">
+    <button id = "editButton">✏️</button> 
     <button id="ideasButton" onclick="openIdeaForm()">+</button> 
-    <div class="ideaFormPopup" id="ideaForm">
-        <form class="form-container">
-            <input type="text" placeholder="What's your great idea?" id="greatIdeaInput">
-            <button type="button" onclick="closeIdeaForm()">x</button>
-            <button type="submit" id = "addButton">Add</button>
-        </form>
+    <div id = "ideaForm" style="display:none"">
+        <div class="ideaFormPopup">
+                <input type="text" placeholder="What's your great idea?" id="greatIdeaInput">
+                <button type="button" onclick="closeIdeaForm()">x</button>
+                <button type="button" id="addButton">Add</button>
+        </div>
+    </div>
     <script>
+        //When + button clicked, the ideaForm (input box, Add button, x button) is shown
+        //and + button is hidden
         function openIdeaForm(){
             document.getElementById("ideaForm").style.display = "inline";
             document.getElementById("ideasButton").style.display = "none";
+            document.getElementById("editButton").style.display = "none";
         }
+        //When x button clicked, input box is cleared, ideaForm is hidden, + button
         function closeIdeaForm(){
             document.getElementById("ideaForm").style.display = "none";
             document.getElementById("ideasButton").style.display = "inline";
+            document.getElementById("editButton").style.display = "inline";
             document.getElementById("greatIdeaInput").value = "";
         }
     </script>
-    </div>
+
     <h2>Ideas</h2>
-
-    
-
     <ul id="ideasList"></ul>
-    <script>const category = 'dunch';</script>
-    <script src="ideas.js"></script>
 </div>
 
 
-
+<script type="module">
+  import { setupIdeas } from './ideas.js';
+  setupIdeas('dunch');   // 'breakfast', 'dessert', 'snacks' on the other pages
+</script>
 </body>
 </html>
