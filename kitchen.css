@@ -76,9 +76,26 @@ button:hover{
 
 #editButton{
     margin-right: 50px;
-    font-size: 15px;
+    font-size: 15.5px;
 }
 
+.removeButton
+{
+    margin-top: 0px;
+    padding-bottom: 1px;
+    padding-top: 1px;
+    visibility: hidden;
+}
+
+.removeButtonVisible{
+    visibility: visible;
+
+}
+
+.editListVisible:hover{
+    background-color:#f6aa1c;
+    margin-right:30px;
+}
 
 #ideasList{
     color:#941b0c;
@@ -102,7 +119,6 @@ button:hover{
     font-family: 'Trebuchet MS';
 
 }
-
 
 .recipes{
     position: relative;

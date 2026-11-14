@@ -33,8 +33,9 @@
 
 <!--Ideas Section-->
 <div class="Ideas">
-    <button id = "editButton">✏️</button> 
-    <button id="ideasButton" onclick="openIdeaForm()">+</button> 
+    <button id = "editButton" onclick="openEdit()">✎</button> 
+    <button id="ideasButton" onclick="openIdeaForm()">+</button>
+    <button type="button" id="saveButton" style="display:none" onclick="closeEdit()">Save</button>
     <div id = "ideaForm" style="display:none"">
         <div class="ideaFormPopup">
                 <input type="text" placeholder="What's your great idea?" id="greatIdeaInput">
@@ -57,6 +58,23 @@
             document.getElementById("editButton").style.display = "inline";
             document.getElementById("greatIdeaInput").value = "";
         }
+        function openEdit(){
+            document.getElementById("saveButton").style.display = "inline";
+            document.getElementById("editButton").style.display = "none";
+            document.getElementById("ideasButton").style.display = "none";
+            document.querySelectorAll(".removeButton").forEach(element => element.classList.toggle("removeButtonVisible"));
+            document.querySelectorAll("li").forEach(element => element.classList.toggle("editListVisible"));
+        }
+        function closeEdit(){
+            document.getElementById("saveButton").style.display = "none";
+            document.getElementById("editButton").style.display = "inline";
+            document.getElementById("ideasButton").style.display = "inline";
+            document.querySelectorAll(".removeButton").forEach(element => element.classList.toggle("removeButtonVisible"));
+            document.querySelectorAll("li").forEach(element => element.classList.toggle("editListVisible"));
+        }           
+        
+            
+
     </script>
 
     <h2>Ideas</h2>

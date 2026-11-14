@@ -23,6 +23,7 @@ export async function setupIdeas(category) {
     const removeBtn = document.createElement('button');
     removeBtn.type = 'button';
     removeBtn.textContent = 'x';
+    removeBtn.className='removeButton';
     removeBtn.addEventListener('click', async () => {
       await updateDoc(ref, { items: arrayRemove(text) });
       li.remove();
